@@ -1,10 +1,11 @@
-from random import choice
+from random import choice, randint
 from string import ascii_letters
 from config import DATA_PATH
 
 
-def generate_random_string(length):
-    return ''.join(choice(ascii_letters) for _ in range(length))
+def generate_random_string(max_length):
+    str_length = randint(1, max_length)
+    return ''.join(choice(ascii_letters) for _ in range(str_length))
 
 
 def generate_file(rows_length, length):
